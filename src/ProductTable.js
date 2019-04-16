@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import settings from './properties/settings.json';
 
 class ProductTable extends Component {
 
@@ -7,11 +8,12 @@ class ProductTable extends Component {
         super();
         this.state = {
             products: []
-        };
+        };        
+        this.products_url = settings.api_url + ':' + settings.api_port + '/products';  
     }
 
     componentDidMount() {
-        fetch('http://192.168.88.68:8080/products')
+        fetch(this.products_url)
         .then(results => {
             return results.json();
         }).then(data => {
