@@ -20,7 +20,8 @@ class App extends Component {
         text: '',
         key: '',
       },
-      search: ''
+      search: '',
+      customerId: 'TORTU'
     }
     this.url = settings.api_url + ':' + settings.api_port;
   }
@@ -47,23 +48,11 @@ class App extends Component {
   }
 
   buyItem = key => {
-    // const filteredItems = this.state.orders.filter(order => {
-    //   return order.orderID !== key
-    // })
     let chartAddedProducts = this.state.chartProducts;
     chartAddedProducts.push(key);
     this.setState({chartProducts: chartAddedProducts})
     let updatedSubTotal = this.state.subTotal + key.unitPrice;
     this.setState({subTotal: updatedSubTotal})
-    console.log(key);
-    //this.setState({
-      // orders: filteredItems,
-      // originalOrders: filteredItems
-    //})
-    // fetch(this.url + '/deleteOrder/' + key)
-    // .catch(function() {
-    //     console.log("error");
-    // });
   }
 
   render() {
@@ -74,7 +63,7 @@ class App extends Component {
           Product available from Company.com
           </h1>
           <div>
-            <h3>Your chart:</h3>
+            <h3>Your chart ({this.state.customerId}):</h3>
             <div className="chart">
             <ProductChart chartProducts={this.state.chartProducts} subTotal={this.state.subTotal} />
             </div>
