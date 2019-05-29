@@ -11,3 +11,7 @@ The table is populated from the Business Data API by REST call to the endpoint *
 
 2019-05-02 Testing of automization.  
 Test 1  
+Test 2  
+
+2019-05-29 Testing of automization.  
+Test1
