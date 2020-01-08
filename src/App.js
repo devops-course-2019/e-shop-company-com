@@ -59,9 +59,9 @@ class App extends Component {
     return (
       <div className="App">
       <header className="App-header">
-          <h1>
+          <h2>
           Buy from Company.com
-          </h1>
+          </h2>
           <div>
             <h3>Your chart ({this.state.customerId}):</h3>
             <div className="chart">
