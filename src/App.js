@@ -60,7 +60,7 @@ class App extends Component {
       <div className="App">
       <header className="App-header">
           <h2>
-          Buy from Company.com
+          Buy from Company.com NOW!
           </h2>
           <div>
             <h3>Your chart ({this.state.customerId}):</h3>
